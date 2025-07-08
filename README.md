@@ -43,7 +43,6 @@ Strategic consulting and storytelling that move people and businesses.
 
 ### 🧠 **QuantumAI – Predictive Analytics**
 A revolutionary platform combining AI with quantum algorithms to predict market trends with 94% accuracy.
-- $2.4M in client savings  
 - Featured: 2024
 
 ### 🌍 **GlobalCorp – Digital Transformation**
