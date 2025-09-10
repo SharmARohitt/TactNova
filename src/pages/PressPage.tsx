@@ -202,7 +202,7 @@ export const PressPage: React.FC = () => {
               <div className="space-y-3 text-left">
                 <div>
                   <p className="text-neutral-400 text-sm">Email</p>
-                  <p className="text-white">tactnovaofficial@gmail.com</p>
+                  <p className="text-white">tactnovaofficiall@gmail.com</p>
                 </div>
                 <div>
                   <p className="text-neutral-400 text-sm">Phone</p>

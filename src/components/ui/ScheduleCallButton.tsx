@@ -7,11 +7,13 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import toast from 'react-hot-toast';
+import { bookingAPI, type BookingData } from '../../services/api';
 
 // Form validation schema
 const scheduleFormSchema = yup.object({
   name: yup.string().required('Name is required'),
   email: yup.string().email('Invalid email').required('Email is required'),
+  phone: yup.string().required('Phone number is required'),
   company: yup.string().required('Company is required'),
   service: yup.string().required('Please select a service'),
   selectedDate: yup.string().required('Please select a date'),
@@ -209,13 +211,23 @@ export const ScheduleCallButton: React.FC = () => {
 
   const onSubmit = async (data: FormData) => {
     try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      // Prepare booking data for API
+      const bookingData: BookingData = {
+        name: data.name,
+        email: data.email,
+        phone: data.phone,
+        company: data.company,
+        service: data.service,
+        selectedDate: selectedDate,
+        selectedTime: selectedTime,
+      };
+
+      // Call the backend API
+      const result = await bookingAPI.create(bookingData);
       
-      // Here you would integrate with Calendly or Google Calendar API
-      console.log('Form submitted:', { ...data, selectedDate, selectedTime });
+      console.log('Booking created successfully:', result);
       
-      toast.success('Your call has been scheduled!', {
+      toast.success('Your call has been scheduled! Check your email for confirmation.', {
         duration: 4000,
         style: {
           background: '#1f2937',
@@ -226,7 +238,10 @@ export const ScheduleCallButton: React.FC = () => {
       
       handleCloseModal();
     } catch (error) {
-      toast.error('Failed to schedule call. Please try again.', {
+      console.error('Booking error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'Failed to schedule call. Please try again.';
+      
+      toast.error(errorMessage, {
         style: {
           background: '#1f2937',
           color: '#fff',
@@ -376,6 +391,19 @@ export const ScheduleCallButton: React.FC = () => {
                         type="email"
                         placeholder="Enter your email"
                         error={errors.email?.message}
+                        className="bg-neutral-800/50 border-neutral-600 focus:border-blue-500"
+                      />
+                    </div>
+
+                    <div>
+                      <label className="block text-sm font-medium text-neutral-300 mb-2">
+                        Phone Number *
+                      </label>
+                      <Input
+                        {...register('phone')}
+                        type="tel"
+                        placeholder="Enter your phone number"
+                        error={errors.phone?.message}
                         className="bg-neutral-800/50 border-neutral-600 focus:border-blue-500"
                       />
                     </div>

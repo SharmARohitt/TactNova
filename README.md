@@ -62,9 +62,9 @@ We’re now accepting new projects for **Q2 2025** — get **20% off your first 
 
 - 📍 New Delhi, India & Global Operations  
 - 📞 +91 9205828350  
-- 📧 tactnovaofficial@gmail.com  
+- 📧 tactnovaofficiall@gmail.com  
 
-👉 [Schedule a Free Consultation](mailto:tactnovaofficial@gmail.com)
+👉 [Schedule a Free Consultation](mailto:tactnovaofficiall@gmail.com)
 
 ---
 

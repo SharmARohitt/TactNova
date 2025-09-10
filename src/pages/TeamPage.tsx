@@ -10,7 +10,7 @@ import {
   Mail,
   Phone,
   Linkedin,
-  Github
+  Instagram
 } from 'lucide-react';
 
 interface JoinTeamFormData {
@@ -106,17 +106,17 @@ export const TeamPage: React.FC = () => {
                   dual-niche solutions across technology and creative domains.
                 </p>
                 <div className="flex justify-center space-x-4">
-                  <a href="mailto:tactnovaofficial@gmail.com" className="text-neutral-400 hover:text-primary-400 transition-colors">
+                  <a href="mailto:tactnovaofficiall@gmail.com" className="text-neutral-400 hover:text-primary-400 transition-colors">
                     <Mail className="w-5 h-5" />
                   </a>
-                  <a href="tel:+919205828350" className="text-neutral-400 hover:text-primary-400 transition-colors">
+                  <a href="#" className="text-neutral-400 hover:text-primary-400 transition-colors">
                     <Phone className="w-5 h-5" />
                   </a>
-                  <a href="#" className="text-neutral-400 hover:text-primary-400 transition-colors">
+                  <a href="https://www.linkedin.com/company/tactnovaa/posts?lipi=urn%3Ali%3Apage%3Ad_flagship3_detail_base%3BRrJ%2B3M3sTY2TXyVQgFWx0A%3D%3D" target="_blank" rel="noopener noreferrer" className="text-neutral-400 hover:text-primary-400 transition-colors">
                     <Linkedin className="w-5 h-5" />
                   </a>
-                  <a href="#" className="text-neutral-400 hover:text-primary-400 transition-colors">
-                    <Github className="w-5 h-5" />
+                  <a href="https://www.instagram.com/tactnovaofficial/" target="_blank" rel="noopener noreferrer" className="text-neutral-400 hover:text-primary-400 transition-colors">
+                    <Instagram className="w-5 h-5" />
                   </a>
                 </div>
               </div>

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Filter, 
@@ -959,9 +960,11 @@ export const ProjectsPage: React.FC = () => {
               Let's create the next featured project together. Transform your vision into reality.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="secondary" size="lg">
-                Start Your Project
-              </Button>
+              <Link to="/contact">
+                <Button variant="secondary" size="lg">
+                  Start Your Project
+                </Button>
+              </Link>
               <Button variant="outline" size="lg">
                 Download Portfolio
               </Button>

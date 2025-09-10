@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import { motion, useInView } from 'framer-motion';
 import { 
   Code, Cloud, Shield, Smartphone, Globe,
@@ -665,10 +666,12 @@ const TechSolutionsPage: React.FC = () => {
               real business value. Get started with a free consultation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="group">
-                Start Your Project
-                <ChevronRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
+              <Link to="/contact">
+                <Button size="lg" className="group">
+                  Start Your Project
+                  <ChevronRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
               <Button variant="outline" size="lg">
                 <MessageSquare className="mr-2 h-5 w-5" />
                 Schedule Consultation

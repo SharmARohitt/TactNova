@@ -302,7 +302,7 @@ export const PrivacyPolicyPage: React.FC = () => {
                       </div>
                       <div className="flex items-center">
                         <Mail className="w-5 h-5 text-primary-400 mr-3" />
-                        <span>tactnovaofficial@gmail.com</span>
+                        <span>tactnovaofficiall@gmail.com</span>
                       </div>
                       <div className="text-sm text-neutral-400 mt-4">
                         Tactnova<br />

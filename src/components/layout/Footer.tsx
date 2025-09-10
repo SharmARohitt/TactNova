@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  Github, 
+  Instagram, 
   Twitter, 
   Linkedin, 
   Mail, 
@@ -15,44 +15,44 @@ import { Input } from '../ui/Input';
 
 const footerLinks = {
   Solutions: [
-    { name: 'AI Development', href: '/solutions/tech/ai' },
-    { name: 'Full Stack Development', href: '/solutions/tech/fullstack' },
-    { name: 'Cybersecurity', href: '/solutions/tech/security' },
-    { name: 'Brand Identity', href: '/solutions/non-tech/branding' },
-    { name: 'Content Creation', href: '/solutions/non-tech/content' },
-    { name: 'Business Strategy', href: '/solutions/non-tech/strategy' },
+    { name: 'AI Development', href: '/tech-solutions' },
+    { name: 'Full Stack Development', href: '/tech-solutions' },
+    { name: 'Cybersecurity', href: '/tech-solutions' },
+    { name: 'Brand Identity', href: '/non-tech-solutions' },
+    { name: 'Content Creation', href: '/non-tech-solutions' },
+    { name: 'Business Strategy', href: '/non-tech-solutions' },
   ],
   Company: [
     { name: 'About Us', href: '/about' },
-    { name: 'Our Team', href: '/about/team' },
+    { name: 'Our Team', href: '/team' },
     { name: 'Careers', href: '/careers' },
     { name: 'Press', href: '/press' },
     { name: 'Partners', href: '/partners' },
     { name: 'Blog', href: '/blog' },
   ],
   Resources: [
-    { name: 'Documentation', href: '/docs' },
+    { name: 'Documentation', href: '/documentation' },
     { name: 'Case Studies', href: '/case-studies' },
-    { name: 'Whitepapers', href: '/resources/whitepapers' },
-    { name: 'API Reference', href: '/api' },
-    { name: 'Developer Tools', href: '/tools' },
+    { name: 'Whitepapers', href: '/whitepapers' },
+    { name: 'API Reference', href: '/api-reference' },
+    { name: 'Developer Tools', href: '/developer-tools' },
     { name: 'Community', href: '/community' },
   ],
   Support: [
-    { name: 'Help Center', href: '/help' },
-    { name: 'Contact Support', href: '/support' },
+    { name: 'Help Center', href: '/help-center' },
+    { name: 'Contact Support', href: '/contact' },
     { name: 'Status Page', href: '/status' },
-    { name: 'Bug Reports', href: '/bugs' },
-    { name: 'Feature Requests', href: '/features' },
     { name: 'Security', href: '/security' },
+    { name: 'Privacy Policy', href: '/privacy-policy' },
+    { name: 'Terms of Service', href: '/terms-of-service' },
   ],
 };
 
 const socialLinks = [
-  { name: 'GitHub', href: '#', icon: Github },
+  { name: 'Instagram', href: 'https://www.instagram.com/tactnovaofficial/', icon: Instagram },
   { name: 'Twitter', href: '#', icon: Twitter },
-  { name: 'LinkedIn', href: '#', icon: Linkedin },
-  { name: 'Email', href: 'mailto:tactnovaofficial@gmail.com', icon: Mail },
+  { name: 'LinkedIn', href: 'https://www.linkedin.com/company/tactnovaa/posts?lipi=urn%3Ali%3Apage%3Ad_flagship3_detail_base%3BRrJ%2B3M3sTY2TXyVQgFWx0A%3D%3D', icon: Linkedin },
+  { name: 'Email', href: 'mailto:tactnovaofficiall@gmail.com', icon: Mail },
 ];
 
 export const Footer: React.FC = () => {
@@ -94,7 +94,7 @@ export const Footer: React.FC = () => {
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4 text-primary-400" />
-                <span>tactnovaofficial@gmail.com</span>
+                <span>tactnovaofficiall@gmail.com</span>
               </div>
             </div>
 
@@ -106,6 +106,8 @@ export const Footer: React.FC = () => {
                   <a
                     key={social.name}
                     href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-10 h-10 bg-neutral-800 rounded-lg flex items-center justify-center text-neutral-400 hover:text-primary-400 hover:bg-primary-500/10 transition-all duration-200"
                     aria-label={social.name}
                   >
@@ -176,22 +178,22 @@ export const Footer: React.FC = () => {
             
             <div className="flex space-x-6 text-sm">
               <Link 
-                to="/privacy" 
+                to="/privacy-policy" 
                 className="text-neutral-400 hover:text-primary-400 transition-colors duration-200"
               >
                 Privacy Policy
               </Link>
               <Link 
-                to="/terms" 
+                to="/terms-of-service" 
                 className="text-neutral-400 hover:text-primary-400 transition-colors duration-200"
               >
                 Terms of Service
               </Link>
               <Link 
-                to="/cookies" 
+                to="/security" 
                 className="text-neutral-400 hover:text-primary-400 transition-colors duration-200"
               >
-                Cookie Policy
+                Security
               </Link>
             </div>
           </div>
