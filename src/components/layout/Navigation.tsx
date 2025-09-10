@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, User, LogOut, Settings } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '../ui/Button';
+import { ScheduleCallButton } from '../ui/ScheduleCallButton';
 import { cn } from '../../utils';
 import tactnovaLogo from '../../assets/images/tactnovawithoutbg.png';
 
@@ -209,17 +210,8 @@ export const Navigation: React.FC<NavigationProps> = ({ user, onSignOut }) => {
                 </div>
               </div>
             ) : (
-              <div className="hidden md:flex items-center space-x-3">
-                <Link to="/signin">
-                  <Button variant="ghost" size="sm">
-                    Sign In
-                  </Button>
-                </Link>
-                <Link to="/signup">
-                  <Button variant="primary" size="sm">
-                    Get Started
-                  </Button>
-                </Link>
+              <div className="hidden md:flex items-center">
+                <ScheduleCallButton />
               </div>
             )}
 
@@ -251,16 +243,18 @@ export const Navigation: React.FC<NavigationProps> = ({ user, onSignOut }) => {
               
               {!user && (
                 <div className="pt-4 border-t border-neutral-800 space-y-3">
-                  <Link to="/signin" className="block">
-                    <Button variant="ghost" className="w-full justify-start">
+                  <div className="flex justify-center">
+                    <ScheduleCallButton />
+                  </div>
+                  <div className="text-center">
+                    <Link to="/signin" className="text-sm text-neutral-400 hover:text-primary-400 transition-colors">
                       Sign In
-                    </Button>
-                  </Link>
-                  <Link to="/signup" className="block">
-                    <Button variant="primary" className="w-full">
+                    </Link>
+                    <span className="mx-2 text-neutral-600">|</span>
+                    <Link to="/signup" className="text-sm text-neutral-400 hover:text-primary-400 transition-colors">
                       Get Started
-                    </Button>
-                  </Link>
+                    </Link>
+                  </div>
                 </div>
               )}
             </div>

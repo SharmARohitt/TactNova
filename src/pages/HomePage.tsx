@@ -115,10 +115,10 @@ const testimonials = [
 ];
 
 const stats = [
-  { label: 'Projects Completed', value: '1000+' },
+  { label: 'Projects Completed', value: '100+' },
   { label: 'Client Satisfaction', value: '98%' },
   { label: 'Global Reach', value: '50+' },
-  { label: 'Innovation Awards', value: '25+' }
+  { label: 'Innovation Awards', value: '5+' }
 ];
 
 // Featured projects for homepage showcase

@@ -20,6 +20,7 @@ import {
 import { Button } from '../components/ui/Button';
 import { Input, Textarea } from '../components/ui/Input';
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/Card';
+import { ScheduleCallButton } from '../components/ui/ScheduleCallButton';
 import toast from 'react-hot-toast';
 
 // Form validation schema
@@ -58,7 +59,7 @@ const contactInfo = [
   {
     icon: Mail,
     title: 'Email Us',
-    details: ['tactnovaofficial@gmail.com', 'Response within 24 hours'],
+    details: ['tactnovaofficiall@gmail.com', 'Response within 24 hours'],
   },
   {
     icon: Clock,
@@ -465,10 +466,8 @@ export const ContactPage: React.FC = () => {
             <p className="text-blue-100 text-lg mb-8">
               Join 200+ successful companies that chose Tactnova for their innovation journey.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="secondary" size="lg">
-                Schedule a Call
-              </Button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <ScheduleCallButton />
               <Button variant="outline" size="lg">
                 View Case Studies
               </Button>
